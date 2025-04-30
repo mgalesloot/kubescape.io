@@ -1,0 +1,3022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kubescape.io/blog/">
+      
+      
+        <link rel="prev" href="../project/community/">
+      
+      
+        <link rel="next" href="category/announcements/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>Kubescape Blog - Kubescape</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kubescape-blog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Kubescape" class="md-header__button md-logo" aria-label="Kubescape" data-md-component="logo">
+      
+  <img src="../assets/kubescape-lockup.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kubescape
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kubescape Blog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kubescape/kubescape" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../docs/" class="md-tabs__link">
+          
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../project/about/" class="md-tabs__link">
+          
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/kubescape/kubescape" class="md-tabs__link">
+        
+  
+    
+  
+  GitHub
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kubescape" class="md-nav__button md-logo" aria-label="Kubescape" data-md-component="logo">
+      
+  <img src="../assets/kubescape-lockup.svg" alt="logo">
+
+    </a>
+    Kubescape
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kubescape/kubescape" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/install-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing the client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/install-operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing in your cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/scanning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scanning your environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/accepting-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accepting risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to providers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubescape Operator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Kubescape Operator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/vulnerabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vulnerability scanning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/relevancy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relevancy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/runtime-threat-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Runtime Threat Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/network-policy-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Network Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/scheduled-scans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheduled scans
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/continuous-scanning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous scanning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/prometheus-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prometheus Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/ui-with-headlamp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI with Headlamp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/automatic-release-upgrades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic upgrades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/generating-vex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VEX document generation (experimental)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/operator/telemetry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telemetry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/integrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/integrations/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/integrations/lens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/integrations/vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VS Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frameworks and Controls
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Frameworks and Controls
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/frameworks-and-controls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/frameworks-and-controls/frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/controls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/frameworks-and-controls/configuring-controls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring controls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/guides/kubescape-gha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure checks on a GitHub repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/guides/kubescape-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harden a cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/guides/kubescape-for-teenagers/kubescape-for-teenagers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubescape for teenagers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Kubescape project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kubescape/helm-charts/releases" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kubescape/kubescape/blob/master/CONTRIBUTING.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kubescape Blog
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    April 2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    March 2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    February 2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2024/08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    August 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2024/07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    July 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    December 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    November 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    October 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    September 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="category/announcements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Announcements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="category/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="category/study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kubescape/kubescape" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="kubescape-blog">Kubescape Blog</h1>
+      </header>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="introducing-a-visual-way-to-explore-kubernetes-security-the-kubescape-plugin-for-headlamp"><a class="toclink" href="2025/04/30/kubescape-headlamp/">Introducing a Visual Way to Explore Kubernetes Security: the Kubescape Plugin for Headlamp</a></h2>
+<p>Managing security in Kubernetes can feel like navigating a maze. With countless vulnerabilities, policies, and best practices to juggle, it’s easy for developers to get overwhelmed and hard to know where to start. Reporting on your security posture adds another layer of complexity-especially when many open-source tools are highly technical and not user-friendly for the average Kubernetes user.</p>
+<p>That’s where Headlamp comes in. Headlamp is an open-source Kubernetes UI that provides an intuitive, visual way to explore and manage your clusters. It helps users of all experience levels understand what’s happening in their environments, surfacing insights that would otherwise require deep command-line expertise.</p>
+<h3 id="announcing-the-kubescape-plugin-for-headlamp"><a class="toclink" href="2025/04/30/kubescape-headlamp/#announcing-the-kubescape-plugin-for-headlamp">Announcing the Kubescape Plugin for Headlamp</a></h3>
+<p>We’re excited to share the new Kubescape plugin for Headlamp, a game-changer for anyone looking to simplify Kubernetes security management! As Viktor Farcic noted at KubeCon NA 2024, “What Kubescape needs is a GUI.”</p>
+<p>This plugin bridges the gap between robust security scanning and accessible, actionable insights. By reading reports from Kubescape, it brings security and compliance data directly into the Headlamp interface. Now, you can view and manage your cluster’s security posture without switching between tools or deciphering command-line outputs.</p>
+<h3 id="what-can-you-do-with-the-kubescape-plugin"><a class="toclink" href="2025/04/30/kubescape-headlamp/#what-can-you-do-with-the-kubescape-plugin">What Can You Do with the Kubescape Plugin?</a></h3>
+<p>The Kubescape plugin enhances Headlamp with dedicated pages and features for:</p>
+<ul>
+<li>
+<p>Configuration Scanning: Instantly see compliance and configuration scan results, making it easier to spot and address misconfigurations.</p>
+</li>
+<li>
+<p>Vulnerability Scanning: Get clear insights into vulnerabilities and CVEs (Common Vulnerabilities and Exposures) affecting your clusters and images.</p>
+</li>
+<li>
+<p>Network Policies Viewer: Visualize and manage network policies to strengthen your cluster’s security boundaries.</p>
+</li>
+<li>
+<p>Admission Policies Playground: Test and validate admission policies as recommended by Kubescape. The playground leverages WASM to evaluate CEL expressions in real-time, empowering you to experiment safely.</p>
+</li>
+<li>
+<p>Multi-Tenant Support: Enjoy namespace-specific views for multi-tenant clusters, so teams can focus on what matters to them.</p>
+</li>
+</ul>
+<figure>
+<p><img alt="Source: Kubescape plugin for Headlamp PoC" src="kubescape-headlamp/headlamp-compliance.png" width="600" />
+  </p>
+<figcaption>Source: Kubescape plugin for Headlamp PoC</figcaption>
+</figure>
+<h3 id="getting-started-how-to-install-the-kubescape-plugin"><a class="toclink" href="2025/04/30/kubescape-headlamp/#getting-started-how-to-install-the-kubescape-plugin">Getting Started: How to Install the Kubescape Plugin</a></h3>
+<p>Ready to try it out? Here’s a quick guide to getting the Kubescape plugin up and running in Headlamp.</p>
+<h4 id="kubescape"><a class="toclink" href="2025/04/30/kubescape-headlamp/#kubescape">Kubescape</a></h4>
+<p>Follow the <a href="https://kubescape.io/docs/install-operator/">Kubescape operator installation procedure</a> and make sure you enable continuousScan <code>--set capabilities.continuousScan=enable</code> and network observability <code>--set capabilities.networkPolicyService=enable</code>.</p>
+<h4 id="headlamp-desktop-app"><a class="toclink" href="2025/04/30/kubescape-headlamp/#headlamp-desktop-app">Headlamp Desktop App​</a></h4>
+<p>If you are using Headlamp as a desktop app (Windows, Mac, or Linux), go to the Plugin Catalog (available from the sidebar when in the home view), then look for the Kubescape plugin from the list, click it to see its details, and then click the install button. After the plugin is installed, use the notification to reload Headlamp.</p>
+<h4 id="headlamp-web-app"><a class="toclink" href="2025/04/30/kubescape-headlamp/#headlamp-web-app">Headlamp Web app​</a></h4>
+<p>If you are deploying Headlamp as a web app (running in-cluster), you need to add the plugin files to the plugins folder of the headlamp-server. The Helm chart of Headlamp allows you to add an init container that will download the plugin. Please check the instructions at <a href="https://github.com/kubescape/headlamp-plugin/">Kubescape plugin for Headlamp</a>.</p>
+<h3 id="acknowledgements-future"><a class="toclink" href="2025/04/30/kubescape-headlamp/#acknowledgements-future">Acknowledgements &amp; Future</a></h3>
+<p>A huge thanks to the Headlamp team for providing an extensible multi-cluster K8s dashboard experience, and Kubescape team for building such a powerful tool for security posture management.</p>
+<p>The Kubescape plugin for Headlamp is currently in beta and ready for you to test. We’re eager to hear your feedback and ideas let us know what you think!</p>
+<p>With this new integration, Kubernetes security is more accessible than ever. Dive in, explore your clusters visually, and take control of your security posture today!</p>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2025/04/30/kubescape-headlamp/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/oshratn.png" alt="Oshrat Nir" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2025-04-30 00:00:00">April 30, 2025</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  3 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescape-now-supports-cis-kubernetes-benchmark-v110"><a class="toclink" href="2025/03/06/kubescape-cis-10/">Kubescape Now Supports CIS Kubernetes Benchmark v1.10</a></h2>
+<p>We're happy to announce that Kubescape has upgraded it's securiy controls to align with the latest CIS Kubernetes Benchmark v1.10. Thus, helping you strengthen your cluster security posture with industry-recognized standards.</p>
+<h3 id="whats-new-in-cis-kubernetes-benchmark-v110"><a class="toclink" href="2025/03/06/kubescape-cis-10/#whats-new-in-cis-kubernetes-benchmark-v110">What's New in CIS Kubernetes Benchmark v1.10?</a></h3>
+<p>The CIS Kubernetes Benchmark v1.10.0 delivers significant enhancements to address the evolving security landscape:</p>
+<ul>
+<li>Comprehensive security recommendations tailored to counter emerging threats</li>
+<li>Broader component coverage across your Kubernetes infrastructure</li>
+<li>Clearer control documentation to improve implementation accuracy</li>
+</ul>
+<h3 id="key-improvements-include"><a class="toclink" href="2025/03/06/kubescape-cis-10/#key-improvements-include">Key Improvements Include:</a></h3>
+<p><strong>Automated Assessment Content (AAC)</strong>: Full integration with AAC and expanded compatibility with Kubernetes versions 1.30 and 1.31, streamlining your compliance verification process.</p>
+<p><strong>Enhanced Recommendations</strong>: 27 recommendations have undergone thorough revision to their audit and remediation procedures.</p>
+<p><strong>Upgraded Cryptographic Standards</strong>: Modernized cipher specifications that enforce more robust encryption requirements</p>
+<p><strong>Refined Security Context Variables</strong>: Updated terminology around 'securityContext' variables to facilitate proper security configuration</p>
+<h3 id="how-kubescape-empowers-your-compliance-journey"><a class="toclink" href="2025/03/06/kubescape-cis-10/#how-kubescape-empowers-your-compliance-journey">How Kubescape Empowers Your Compliance Journey</a></h3>
+<p>With Kubescape's implementation of CIS v1.10, you can:</p>
+<ul>
+<li>Perform detailed compliance assessments against the latest benchmark</li>
+<li>Quickly identify compliance gaps between previous and current requirements</li>
+<li>Follow clear, practical remediation guidance to address vulnerabilities</li>
+</ul>
+<h3 id="take-action-today"><a class="toclink" href="2025/03/06/kubescape-cis-10/#take-action-today">Take Action Today</a></h3>
+<p>Ready to strengthen your Kubernetes security posture? Try Kubescape now to run your first CIS v1.10 compliance scan. See how your clusters measure up against the latest security standards.</p>
+<p>Our community forums and documentation are available to support your implementation journey. Join us in making Kubernetes environments more secure, one cluster at a time.</p>
+<h3 id="join-the-kubescape-community"><a class="toclink" href="2025/03/06/kubescape-cis-10/#join-the-kubescape-community">Join the Kubescape community</a></h3>
+<p>We welcome your feedback and ideas for improvement. We hold <a href="https://kubescape.io/project/community/#monthly-meeting">community meetings</a> on Zoom, on the first Tuesday of every month, at 14:00 GMT.</p>
+<p>Thanks to all our contributors! Check out our <a href="https://github.com/kubescape/project-governance/blob/main/CONTRIBUTING.md">CONTRIBUTING</a> file to learn how to join them.</p>
+<ul>
+<li>Feel free to pick a task from the <a href="https://github.com/orgs/kubescape/projects/4/views/3">good first issue list</a> and suggest a design</li>
+<li><a href="https://github.com/orgs/kubescape/projects/4">Open an issue</a>: we aim to respond to all issues within 48 hours</li>
+<li><a href="https://slack.cncf.io/">Join the CNCF Slack</a> and then our <a href="https://cloud-native.slack.com/archives/C04EY3ZF9GE">users</a> or <a href="https://cloud-native.slack.com/archives/C04GY6H082K">developers</a> channel</li>
+<li>Don’t forget to leave a star on our <a href="https://github.com/kubescape/kubescape">repository</a>: it means the world to us!</li>
+</ul>
+<p>The Kubescape project follows the <a href="https://github.com/cncf/foundation/blob/master/code-of-conduct.md">CNCF Code of Conduct</a>.</p>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2025/03/06/kubescape-cis-10/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/oshratn.png" alt="Oshrat Nir" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2025-03-06 00:00:00">March 6, 2025</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  2 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescapes-journey-to-incubation-celebrating-our-community-and-a-secure-kubernetes-future"><a class="toclink" href="2025/02/25/kubescape-incubation/">Kubescape's Journey to Incubation: Celebrating our Community and a Secure Kubernetes Future</a></h2>
+<p>We are thrilled to share that Kubescape has officially been accepted as a CNCF Incubating project. This milestone is a significant achievement for the project. Kubescape began in 2021 as a fun project to scan for compliance with NSA-CISA Kubernetes hardening guidelines. What started as a security scanner, helping Devlopers and DevOps teams implement better Kubernetes security practices, evolved into a full security platform. Still helping security Kubernetes environments 😉</p>
+<p>From the very beginning, Kubescape was built with the cloud-native community in mind. It started as a simple CLI tool designed to check cluster configurations against NSA-CISA Kubernetes Hardening Guidance. Over time, with the support of a rapidly growing community, Kubescape has evolved into one of the most complete open-source solutions for Kubernetes security. We are proud to have contributed to its development alongside contributors in the Kubescape community, and to see so many adopters leveraging Kubescape in their day-to-day workflows.</p>
+<p>The Kubescape community has been a driving force behind this success. It’s not just the maintainers and contributors that we celebrate but the many users who have adopted and integrated Kubescape into their environments. Companies like Intel, AWS, Bitnami, ARMO, and Energi Danmark are just a few of the organizations using Kubescape. Some use Kubescape to secure their Kubernetes clusters. Others leverage it for educational purposes. Other use cases that go beyond what we imagined when we made our first commit. We are grateful for the trust that these adopters, along with hundreds of others, have shown in Kubescape.</p>
+<p>As we look toward the future, the Kubescape project is poised for even greater growth. Our roadmap is not just about adding more features, but about continuing to improve usability and optimizing the performance of the platform. We are excited to welcome new contributors and users into the fold as we continue on the hamster-wheel of Kubernetes security.</p>
+<p>The Kubescape community is our foundation, and we are committed to fostering a collaborative and inclusive environment where all contributions are valued. With the incredible support of the Cloud Native Computing Foundation (CNCF) and the broader Kubernetes community, we are determined to demonstrate sustained growth, strong governance, and broad adoption on our journey toward CNCF graduation. We believe that this is just the beginning, and we are eager to see where the future takes us.</p>
+<p>Together, with the support of these vibrant communities, Kubescape will continue to evolve and grow, offering better security, deeper insights, and an ever-expanding set of features. We invite everyone - whether you are an adopter, contributor, or newcomer - to join us in shaping the future of Kubernetes security.</p>
+<h3 id="join-the-kubescape-community"><a class="toclink" href="2025/02/25/kubescape-incubation/#join-the-kubescape-community">Join the Kubescape community</a></h3>
+<p>We welcome your feedback and ideas for improvement. We hold <a href="https://kubescape.io/project/community/#monthly-meeting">community meetings</a> on Zoom, on the first Tuesday of every month, at 14:00 GMT.</p>
+<p>Thanks to all our contributors! Check out our <a href="https://github.com/kubescape/project-governance/blob/main/CONTRIBUTING.md">CONTRIBUTING</a> file to learn how to join them.</p>
+<ul>
+<li>Feel free to pick a task from the <a href="https://github.com/orgs/kubescape/projects/4/views/3">good first issue list</a> and suggest a design</li>
+<li><a href="https://github.com/orgs/kubescape/projects/4">Open an issue</a>: we aim to respond to all issues within 48 hours</li>
+<li><a href="https://slack.cncf.io/">Join the CNCF Slack</a> and then our <a href="https://cloud-native.slack.com/archives/C04EY3ZF9GE">users</a> or <a href="https://cloud-native.slack.com/archives/C04GY6H082K">developers</a> channel</li>
+<li>Don’t forget to leave a star on our <a href="https://github.com/kubescape/kubescape">repository</a>: it means the world to us!</li>
+</ul>
+<p>The Kubescape project follows the <a href="https://github.com/cncf/foundation/blob/master/code-of-conduct.md">CNCF Code of Conduct</a>.</p>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2025/02/25/kubescape-incubation/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/oshratn.png" alt="Oshrat Nir" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2025-02-25 00:00:00">February 25, 2025</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  3 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="cel-and-kubescape-transforming-kubernetes-admission-control"><a class="toclink" href="2024/08/04/cel-and-kubescape/">CEL and Kubescape: Transforming Kubernetes Admission Control</a></h2>
+<h3 id="introduction"><a class="toclink" href="2024/08/04/cel-and-kubescape/#introduction">Introduction</a></h3>
+<p>Admission control is a crucial part of the Kubernetes security, enabling the approval or modification of API objects as they are submitted to the server. It allows administrators to enforce business logic or policies on what objects can be admitted into a cluster. Kubernetes RBAC is a scalable authorization mechanism, but lacks the fine grained control over different Kubernetes objects. This creates the need for another layer of control which is Admission Policies. To enhance this capability, Kubernetes introduced dynamic admission control webhooks in version 1.7. Despite its benefits, adoption of admission controllers for policy enforcement faces challenges, namely scalability challenges. Maintaining webhook infrastructure as a production service is complex, and handling webhook failures can either reduce cluster availability or undermine policy enforcement. Additionally, the network hop and evaluation time involved in admission control can introduce significant latency, particularly in "serverless” environments where pods are rapidly spun up in response to network requests.
+Kubernetes 1.30 has brought a significant development to the table with the introduction of the Common Expression Language (CEL) for admission control. This new feature offers an alternative to validating admission webhooks for enforcing custom policies, with a focus on policy enforcement capabilities and CRD validation rules that were previously in beta.
+The introduction of CEL for admission control enables administrators to define complex and tailored policies, improving the overall security of Kubernetes clusters. This is significant for organizations with complex security requirements, as it allows them to create finely tuned policies that precisely match the security needs of different applications and environments.
+In this blog post, we'll explore the benefits of Validating Admission Policies, its goals, and how Kubescape maintainers have leveraged it to create a robust and precise cel-admission-library.</p>
+<h3 id="validating-admission-policies-short-primer"><a class="toclink" href="2024/08/04/cel-and-kubescape/#validating-admission-policies-short-primer">Validating Admission Policies Short Primer</a></h3>
+<p>The first part of this blog post explains what ValidatingAdmissionPolicies are and explain why they were added and their benefits. If you have been following the development of KEP-3488, through alpha in Kubernetes 1.26, beta in Kubernetes 1.28 and GA in the aforementioned Kubernetes 1.30 and you just want to get started with them, feel free to skip to <a href="2024/08/04/cel-and-kubescape/#using-the-kubescape-cel-library-in-your-cluster">Using the Kubescape CEL library in your cluster</a>.
+If you are reading this and thinking: “I already have OPA Gatekeeper or Kyverno up and running to solve this”.</p>
+<figure>
+<p><img alt="Admission control meme" src="/assets/admission-meme.jpg" width="600" /></p>
+</figure>
+<p>Please join us to get a better understanding of this Kubernetes native feature, what it seeks to achieve and what the benefits of using it are. Also, take into account that this functionality will become the de-facto standard, similar to what happened with OpenTelemetry and GatewayAPI.</p>
+<h4 id="introduction-to-validatingadmissionpolicies"><a class="toclink" href="2024/08/04/cel-and-kubescape/#introduction-to-validatingadmissionpolicies">Introduction to ValidatingAdmissionPolicies</a></h4>
+<p>ValidatingAdmissionPolicies are: A declarative, in-process alternative to validating admission webhooks. They use the Common Expression Language (CEL) to define the policies.</p>
+<p>They consist of two main resources:</p>
+<ul>
+<li>ValidatingAdmissionPolicy describes the policy logic</li>
+<li>ValidatingAdmissionPolicyBinding links the above policy to the resources it applies to</li>
+</ul>
+<h4 id="the-goals-of-validating-admission-policies"><a class="toclink" href="2024/08/04/cel-and-kubescape/#the-goals-of-validating-admission-policies">The Goals of Validating Admission Policies</a></h4>
+<p>The Kubernetes team has established specific goals for Validating Admission Policies to guarantee that it aligns with the community's requirements.:</p>
+<ol>
+<li><strong>Alternative to Webhooks</strong>: Validating Admission Policies aims to provide an alternative to webhooks for the majority of validating admission use cases.</li>
+<li><strong>In-Tree Extensions</strong>: The feature intends to offer the in-tree extensions required to build policy frameworks for Kubernetes without relying on webhooks.</li>
+<li><strong>Efficient Type Checking</strong>: Validating Admission Policies aims to make good use of CEL type checking, even when considering that CRD schemas can be changed at any time, and not all fields of built-in types exist in older Kubernetes versions.</li>
+<li><strong>Polyfill Implementati</strong><strong>on</strong>: The Kubernetes organization plans to provide a polyfill implementation that offers enhancement functionality to Kubernetes versions where this feature is not available.</li>
+<li><strong>Core Functionality as a Library</strong>: Validating Admission Policies intends to provide core functionality as a library, enabling use cases like GitOps, CI/CD pipelines, and auditing to run the same CEL validation checks as the API server.
+Having said that, Polyfill Implementation and Core Functionality as a Library (points 4 and 5 above) have yet to be implemented, and we should keep an eye out for them in the future.</li>
+</ol>
+<h4 id="the-benefits-of-validating-admission-policies"><a class="toclink" href="2024/08/04/cel-and-kubescape/#the-benefits-of-validating-admission-policies">The Benefits of Validating Admission Policies</a></h4>
+<p>The Validating Admission Policies functionality offers several advantages over webhooks, making it a more attractive choice for policy enforcement:</p>
+<ol>
+<li><strong>No Infrastructure Requirement</strong>: Validating Admission Policies doesn't require you to build infrastructure to host the admission webhook, simplifying the process.</li>
+<li><strong>Reduced Latency</strong>: By eliminating the need for an additional network hop, Validating Admission Policies helps reduce latency, ensuring smoother and faster operations.</li>
+<li><strong>Increased Reliability and Scalability</strong>: In-process webhooks used by Validating Admission Policies are less prone to failure than webhooks with extra infrastructure dependencies, enhancing the overall reliability. Beyond this, the in-process admission decision makes the Kubernetes control plane more scaleable since it doesn't depend on an external component.</li>
+<li><strong>Lower Operational Burden</strong>: Cluster administrators responsible for the observability, security, and release/rollout/rollback plans for webhooks will experience a lower operational burden with Validating Admission Policies.</li>
+</ol>
+<h3 id="kubescapes-cel-admission-library"><a class="toclink" href="2024/08/04/cel-and-kubescape/#kubescapes-cel-admission-library">Kubescape's Cel-Admission-Library</a></h3>
+<p>When Validating Admission Policies was first introduced in beta in version 1.26, the maintainers of Kubescape were eager to utilize it. They created the <a href="https://github.com/kubescape/cel-admission-library">cel-admission-library</a> based on Kubescape controls originally written in Rego. The library includes the following 27 admission controls:</p>
+<table>
+<thead>
+<tr>
+<th>Control ID</th>
+<th>Name</th>
+<th>Policy name</th>
+<th>Configuration parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0001">C-0001</a></td>
+<td>Forbidden Container Registries</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0001-deny-forbidden-container-registries.md">kubescape-c-0001-deny-forbidden-container-registries</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_untrustedregistries">untrustedRegistries</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0004">C-0004</a></td>
+<td>Resources memory limit and request</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0004-deny-resources-with-memory-limit-or-request-not-set.md">kubescape-c-0004-deny-resources-with-memory-limit-or-request-not-set</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_memoryrequestmin">memoryRequestMin</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0009">C-0009</a></td>
+<td>Resource limits</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0009-deny-resources-with-memory-or-cpu-limit-not-set.md">kubescape-c-0009-deny-resources-with-memory-or-cpu-limit-not-set</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0016">C-0016</a></td>
+<td>Allow privilege escalation</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0016-allow-privilege-escalation.md">kubescape-c-0016-allow-privilege-escalation</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0017">C-0017</a></td>
+<td>Immutable container filesystem</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0017-deny-resources-with-mutable-container-filesystem.md">kubescape-c-0017-deny-resources-with-mutable-container-filesystem</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0018">C-0018</a></td>
+<td>Configured readiness probe</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0018-deny-resources-without-configured-readiness-probes.md">kubescape-c-0018-deny-resources-without-configured-readiness-probes</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0020">C-0020</a></td>
+<td>Mount service principal</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0020-deny-resources-having-volumes-with-potential-access-to-known-cloud-credentials.md">kubescape-c-0020-deny-resources-having-volumes-with-potential-access-to-known-cloud-credentials</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_cloudprovider">cloudProvider</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0034">C-0034</a></td>
+<td>Automatic mapping of service account</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0034-deny-resources-with-automount-service-account-token-enabled.md">kubescape-c-0034-deny-resources-with-automount-service-account-token-enabled</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0038">C-0038</a></td>
+<td>Host PID/IPC privileges</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0038-deny-resources-with-host-ipc-or-pid-privileges.md">kubescape-c-0038-deny-resources-with-host-ipc-or-pid-privileges</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0041">C-0041</a></td>
+<td>HostNetwork access</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0041-deny-resources-with-host-network-access.md">kubescape-c-0041-deny-resources-with-host-network-access</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0042">C-0042</a></td>
+<td>SSH server running inside container</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0042-deny-resources-with-ssh-server-running.md">kubescape-c-0042-deny-resources-with-ssh-server-running</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0044">C-0044</a></td>
+<td>Container hostPort</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0044-deny-resources-with-host-port.md">kubescape-c-0044-deny-resources-with-host-port</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0045">C-0045</a></td>
+<td>Writable hostPath mount</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0045-deny-workloads-with-hostpath-volumes-readonly-not-false.md">kubescape-c-0045-deny-workloads-with-hostpath-volumes-readonly-not-false</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0046">C-0046</a></td>
+<td>Insecure capabilities</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0046-deny-resources-with-insecure-capabilities.md">kubescape-c-0046-deny-resources-with-insecure-capabilities</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_insecurecapabilities">insecureCapabilities</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0048">C-0048</a></td>
+<td>HostPath mount</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0048-deny-workloads-with-hostpath-mounts.md">kubescape-c-0048-deny-workloads-with-hostpath-mounts</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0050">C-0050</a></td>
+<td>Resources CPU limit and request</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0050-deny-resources-with-cpu-limit-or-request-not-set.md">kubescape-c-0050-deny-resources-with-cpu-limit-or-request-not-set</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_cpulimitmin">cpuLimitMin</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0055">C-0055</a></td>
+<td>Linux hardening</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0055-linux-hardening.md">kubescape-c-0055-linux-hardening</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0056">C-0056</a></td>
+<td>Configured liveness probe</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0056-deny-resources-without-configured-liveliness-probes.md">kubescape-c-0056-deny-resources-without-configured-liveliness-probes</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0057">C-0057</a></td>
+<td>Privileged container</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0057-privileged-container-denied.md">kubescape-c-0057-privileged-container-denied</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0061">C-0061</a></td>
+<td>Pods in default namespace</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0061-deny-workloads-in-default-namespace.md">kubescape-c-0061-deny-workloads-in-default-namespace</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0062">C-0062</a></td>
+<td>Sudo in container entrypoint</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0062-deny-resources-having-containers-with-sudo-in-entrypoint.md">kubescape-c-0062-deny-resources-having-containers-with-sudo-in-entrypoint</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0073">C-0073</a></td>
+<td>Naked PODs</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0073-deny-naked-pods.md">kubescape-c-0073-deny-naked-pods</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0074">C-0074</a></td>
+<td>Containers mounting Docker socket</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0074-resources-mounting-docker-socket-denied.md">kubescape-c-0074-resources-mounting-docker-socket-denied</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0075">C-0075</a></td>
+<td>Image pull policy on latest tag</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0075-deny-resources-with-image-pull-policy-not-set-to-always-for-latest-tag.md">kubescape-c-0075-deny-resources-with-image-pull-policy-not-set-to-always-for-latest-tag</a></td>
+<td>not configurable</td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0076">C-0076</a></td>
+<td>Label usage for resources</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0076-deny-resources-without-configured-list-of-labels-not-set.md">kubescape-c-0076-deny-resources-without-configured-list-of-labels-not-set</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_recommendedlabels">recommendedLabels</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0077">C-0077</a></td>
+<td>K8s common labels usage</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0077-deny-resources-without-configured-list-of-k8s-common-labels-not-set.md">kubescape-c-0077-deny-resources-without-configured-list-of-k8s-common-labels-not-set</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_k8srecommendedlabels">k8sRecommendedLabels</a></td>
+</tr>
+<tr>
+<td><a href="https://hub.armosec.io/docs/c-0078">C-0078</a></td>
+<td>Images from allowed registry</td>
+<td><a href="/docs/policies-based-on-kubescape-controls/kubescape-c-0078-only-allow-images-from-allowed-registry.md">kubescape-c-0078-only-allow-images-from-allowed-registry</a></td>
+<td><a href="https://hub.armosec.io/docs/configuration_parameter_imagerepositoryallowlist">imageRepositoryAllowList</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubescape/cel-admission-library/edit/main/README.md">source</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-the-kubescape-cel-library-in-your-cluster"><a class="toclink" href="2024/08/04/cel-and-kubescape/#using-the-kubescape-cel-library-in-your-cluster">Using the Kubescape CEL library in your cluster</a></h3>
+<p>This section originally appeared in <a href="https://kubernetes.io/blog/2023/03/30/kubescape-validating-admission-policy-library/#using-the-cel-library-in-your-cluster">Kubernetes Validating Admission Policies: A Practical Example</a> on the Kubernetes blog.
+Policies are provided as Kubernetes objects, which are then bound to certain resources by a <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors">selector</a>.
+<a href="https://minikube.sigs.k8s.io/docs/">Minikube</a> is a quick and easy way to install and configure a Kubernetes cluster for testing. To install Kubernetes v1.26 with the ValidatingAdmissionPolicy <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/">feature gate</a> enabled:
+<code>bash minikube start --kubernetes-version=1.30.2 --extra-config=apiserver.runtime-config=admissionregistration.k8s.io/v1alpha1  --feature-gates='ValidatingAdmissionPolicy=true'</code></p>
+<p>To install the policies in your cluster:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install configuration CRD</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>https://github.com/kubescape/cel-admission-library/releases/latest/download/policy-configuration-definition.yaml
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Install basic configuration</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>https://github.com/kubescape/cel-admission-library/releases/latest/download/basic-control-configuration.yaml
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Install policies</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>https://github.com/kubescape/cel-admission-library/releases/latest/download/kubescape-validating-admission-policies.yaml
+</span></code></pre></div></p>
+<p>To apply policies to objects, create a ValidatingAdmissionPolicyBinding resource. Let’s apply the above Kubescape C-0017 control to any namespace with the label policy=enforced:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create a binding</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;EOT</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">apiVersion: admissionregistration.k8s.io/v1alpha1</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">kind: ValidatingAdmissionPolicyBinding</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">metadata:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s"> name: c0017-binding</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s">spec:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s"> policyName: kubescape-c-0017-deny-mutable-container-filesystem</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s"> matchResources:</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s">   namespaceSelector:</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s">     matchLabels:</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s">       policy: enforced</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s">EOT</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Create a namespace for running the example</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>policy-example
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>kubectl<span class="w"> </span>label<span class="w"> </span>namespace<span class="w"> </span>policy-example<span class="w"> </span><span class="s1">&#39;policy=enforced&#39;</span>
+</span></code></pre></div></p>
+<p>Now, if you attempt to create an object without specifying a readOnlyRootFilesystem, it will not be created.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># The next line should fail</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>kubectl<span class="w"> </span>-n<span class="w"> </span>policy-example<span class="w"> </span>run<span class="w"> </span>nginx<span class="w"> </span>--image<span class="o">=</span>nginx<span class="w"> </span>--restart<span class="o">=</span>Never
+</span></code></pre></div></p>
+<p>The output shows our error:
+<code>bash The pods "nginx" is invalid: : ValidatingAdmissionPolicy 'kubescape-c-0017-deny-mutable-container-filesystem' with binding 'c0017-binding' denied request: Pods having containers with mutable filesystem not allowed! (see more at https://hub.armosec.io/docs/c-0017)</code></p>
+<h3 id="configuration"><a class="toclink" href="2024/08/04/cel-and-kubescape/#configuration">Configuration</a></h3>
+<p>Policy objects can include configuration, which is provided in a different object. Many of the Kubescape controls require a configuration: which labels to require, which capabilities to allow or deny, which registries to allow containers to be deployed from, etc. Default values for those controls are defined in <a href="https://github.com/kubescape/cel-admission-library/blob/main/configuration/basic-control-configuration.yaml">the ControlConfiguration object</a>.
+To use this configuration object, or your own object in the same format, add a paramRef.name value to your binding object:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apiVersion:<span class="w"> </span>admissionregistration.k8s.io/v1alpha1
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>kind:<span class="w"> </span>ValidatingAdmissionPolicyBinding
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>metadata:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w"> </span>name:<span class="w"> </span>c0001-binding
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>spec:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w"> </span>policyName:<span class="w"> </span>kubescape-c-0001-deny-forbidden-container-registries
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w"> </span>paramRef:
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">   </span>name:<span class="w"> </span>basic-control-configuration
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w"> </span>matchResources:
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">   </span>namespaceSelector:
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">     </span>matchLabels:
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">       </span>policy:<span class="w"> </span>enforced
+</span></code></pre></div></p>
+<h3 id="conclusion"><a class="toclink" href="2024/08/04/cel-and-kubescape/#conclusion">Conclusion</a></h3>
+<p>The introduction of Validating Admission Policies in Kubernetes 1.30 is a game-changer, offering a more efficient and reliable way to enforce custom policies. With its numerous benefits and well-defined goals, Validating Admission Policies is set to make a significant impact on the Kubernetes landscape. The cel-admission-library created by Kubescape maintainers is a testament to the potential of this new feature, and we encourage you to try it out using Kubescape.
+We are happy to contribute this library to the Kubernetes community and will continue to develop it for Kubescape and Kubernetes users alike. We hope it becomes useful, either as something you use yourself, or as examples for you to write your own policies.
+As for the validating admission policy feature itself, we are very excited to see this native functionality generally available on Kubernetes.</p>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2024/08/04/cel-and-kubescape/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/oshratn.png" alt="Oshrat Nir" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2024-08-04 00:00:00">August 4, 2024</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  8 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="enhancing-bitnami-helm-charts-security-a-kubescape-case-study"><a class="toclink" href="2024/07/16/kubescape-study-bitnami-charts/">Enhancing Bitnami Helm Charts Security: A Kubescape Case Study</a></h2>
+<h3 id="introduction"><a class="toclink" href="2024/07/16/kubescape-study-bitnami-charts/#introduction">Introduction</a></h3>
+<p>CVEs get all the press when it comes to secure software supply chain, and for good reason: vulnerabilities in open source code cost the global economy billions of dollars per year. However, even the most secure applications with the best supply chain provenance can be accidentally misconfigured in such a way that leaves insidious security holes lurking in your environment.</p>
+<p>Much of the value that <a href="https://bitnami.com/">Bitnami</a> adds in packaging open source software is in the configuration. Our Helm charts, for example, are loved because they are very thorough in exposing the “knobs and dials'' that are unique to each open source application you deploy to Kubernetes. Developers and IT admins alike also appreciate that we are constantly checking and improving the default configuration we ship in our charts to ensure they are as secure as possible. That’s why, when we recently discovered an open-source Kubernetes security project called <a href="https://github.com/kubescape/kubescape">Kubescape</a>, we saw an opportunity to thoroughly check our software against industry best practices and close any gaps that existed.</p>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2024/07/16/kubescape-study-bitnami-charts/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/agarcia-oss.png" alt="Alfredo García" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2024-07-16 00:00:00">July 16, 2024</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/study/"
+                    class="md-meta__link"
+                  >Study</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  4 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="patching-image-vulnerabilities-with-kubescape-copa"><a class="toclink" href="2024/07/14/kubescape-3-image-patching/">Patching Image Vulnerabilities with Kubescape &amp; Copa</a></h2>
+<p>In this article, we’ll learn how can we patch vulnerabilities in our container images using Kubescape &amp; Copa.</p>
+<hr />
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2024/07/14/kubescape-3-image-patching/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/anubhav06.png" alt="Anubhav Gupta" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2024-07-14 00:00:00">July 14, 2024</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  5 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescape-the-1st-open-source-project-to-support-vex-generation"><a class="toclink" href="2023/12/07/kubescape-support-for-vex-generation/">Kubescape: The 1st Open Source project to support VEX Generation</a></h2>
+<h3 id="introduction"><a class="toclink" href="2023/12/07/kubescape-support-for-vex-generation/#introduction">Introduction</a></h3>
+<p>Vulnerability Exploitability eXchange (VEX) is a vulnerability document designed to complement a Software Bill of Materials (SBOM). It informs users of a software product about the applicability of one or more vulnerability findings.</p>
+<p>Security scanners will detect and flag components in software that have been identified as being vulnerable. Often, software is not necessarily affected as signaled by security scanners for many reasons.</p>
+<p>For example: </p>
+<ul>
+<li>
+<p>The vulnerable component may have been already patched, </p>
+</li>
+<li>
+<p>The vulnerable component may not be present</p>
+</li>
+<li>
+<p>The vulnerable code is not actually executed. </p>
+</li>
+</ul>
+<p>The extreme transparency brought by SBOMs into how software is composed will most likely increase the number of these kinds of false positives, requiring an automated solution to avoid an explosion in the false positive rate of security scans. Hence VEX.</p>
+<p>Using VEX is a way to turn down the noise, and give security practitioners a good strong signal, a scanner may consume VEX data from the software supplier. However, it is time-consuming to write a VEX document and since it is imperative these documents stay current, it is a never ending task.
+<strong>The solution to this must come via automation.</strong></p>
+<div class="admonition note">
+<p class="admonition-title"><em><a href="https://kubescape.io/project/survey/">Are you running Kubescape? Want to help us get to incubation in the CNCF? Please help us by filling in our three-question survey!</a></em></p>
+</div>
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2023/12/07/kubescape-support-for-vex-generation/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/oshratn.png" alt="Oshrat Nir" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2023-12-07 00:00:00">December 7, 2023</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  8 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescape-30-the-capabilties-system-continuous-scanning"><a class="toclink" href="2023/11/06/kubescape-3-capablities-continuous-scanning/">Kubescape 3.0: The Capabilties System &amp; Continuous Scanning</a></h2>
+<p>Kubescape 3.0 is laden with new functionality. In this blog post, we will introduce you to two new and complementary features. </p>
+<ul>
+<li>
+<p>The new <strong>Capabilities</strong> system</p>
+</li>
+<li>
+<p>The <strong>Continuous Scanning</strong> feature</p>
+</li>
+</ul>
+<p>Watch a short video for a demonstration of these features in action, or read on.</p>
+<div class="video-wrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KkJhEzcLw6k?si=7wLenc1TSm7LaCn2" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2023/11/06/kubescape-3-capablities-continuous-scanning/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/vladklokun.png" alt="Vlad Klokun" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2023-11-06 00:00:00">November 6, 2023</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  3 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescape-30-introducing-workload-scanning"><a class="toclink" href="2023/10/23/kubescape-3-workload-scanning/">Kubescape 3.0: Introducing Workload Scanning</a></h2>
+<p>Kubescape 3.0 introduces workload scanning, which allows you to comprehensively report on the security posture of individual workloads running in a Kubernetes cluster. This includes both misconfiguration and vulnerability scanning. This scan results in information that gives a 360° assessment of your workload’s security posture.</p>
+<p>Watch a short video for a demonstration of workload scanning and its benefits, or read on.</p>
+<div class="video-wrapper">
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/N13jDFBAy7w?si=6KC2njGeCbSfzZRJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2023/10/23/kubescape-3-workload-scanning/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/vladklokun.png" alt="Vlad Klokun" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2023-10-23 00:00:00">October 23, 2023</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  3 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+        <!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  
+    <!-- Post content -->
+    <div class="md-post__content md-typeset">
+      <h2 id="kubescape-30-introducing-image-scanning"><a class="toclink" href="2023/10/12/kubescape-3-image-scanning/">Kubescape 3.0: Introducing Image Scanning</a></h2>
+<p>In previous versions, Kubescape supported vulnerability scanning inside a cluster. We’ve brought this feature to the Kubescape command line in 3.0.</p>
+<p>Watch a short video for a demonstration of image scanning from the Kubescape CLI and its benefits, or read on.</p>
+<div class="video-wrapper">
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/rjLL_5F41Oc?si=X5XLkMLBpzTQl5FK"  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+
+  
+      <!-- Continue reading link -->
+      <nav class="md-post__action">
+        <a href="2023/10/12/kubescape-3-image-scanning/">
+          Read more...
+        </a>
+      </nav>
+    </div>
+
+    <header class="md-post__header">
+  
+        <!-- Post authors -->
+        
+          <nav class="md-post__authors md-typeset">
+            
+              <span class="md-author">
+                <img src="https://github.com/vladklokun.png" alt="Vlad Klokun" />
+              </span>
+            
+          </nav>
+        
+    
+        <!-- Post metadata -->
+        <div class="md-post__meta md-meta">
+          <ul class="md-meta__list">
+    
+            <!-- Post date -->
+            <li class="md-meta__item">
+              <time datetime="2023-10-12 00:00:00">October 12, 2023</time></li>
+    
+            <!-- Post categories -->
+            
+              <li class="md-meta__item">
+                in
+                
+                  <a
+                    href="category/announcements/"
+                    class="md-meta__link"
+                  >Announcements</a>, 
+                  <a
+                    href="category/project/"
+                    class="md-meta__link"
+                  >Project</a></li>
+            
+    
+            <!-- Post readtime -->
+            
+              
+              <li class="md-meta__item">
+                
+                  2 min read
+                
+              </li>
+            
+          </ul>
+    
+          <!-- Draft marker -->
+          
+        </div>
+      </header>
+      
+
+  </article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a>
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../project/community/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Community" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Community
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="category/announcements/" class="md-footer__link md-footer__link--next" aria-label="Next: Announcements" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Announcements
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+    
+      <div class="md-copyright__highlight">
+        Copyright &copy; 2021 - 2024 <a href="https://kubescape.devstats.cncf.io/d/66/developer-activity-counts-by-companies?orgId=1">The Kubescape Authors</a>
+      </div>
+    
+    
+      Made with
+      <a
+        href="https://squidfunk.github.io/mkdocs-material/"
+        target="_blank" rel="noopener"
+      >
+        Material for MkDocs
+      </a>
+    
+    and hosted by <a href="https://netlify.com/">Netlify</a>
+  </div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/@kubescape" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/kubescape/kubescape" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.sections", "navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
